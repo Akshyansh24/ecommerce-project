@@ -25,10 +25,9 @@ function Product(setshowOldprice) {
           <div className="product-bottom mt-2">
             <div className="product-price">
               <span>$28.85</span>
-              {/* {!setshowOldprice ? <span className='old-price'>$32.8</span> : ""} */}
+              <span className='old-price'>$32.8</span>
             </div>
             <div className="view-product">
-              
               <button> <i class="fa-solid fa-eye"></i> View</button>
             </div>
           </div>

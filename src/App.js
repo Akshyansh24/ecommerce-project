@@ -5,6 +5,8 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Header from "../src/components/Header/Header"
 import AppContext from './utils/context';
 import Home from "../src/components/Home/Home"
+import Contact from './components/Contact/Contact';
+
 function App() {
   return (
       <div>
@@ -15,6 +17,8 @@ function App() {
                   <Routes>
                       <Route>
                         <Route path="/" element ={<Home/>}/>  
+                        <Route path="/contact" element ={<Contact/>}/>  
+
                       </Route>
                   </Routes>
                 </AppContext>

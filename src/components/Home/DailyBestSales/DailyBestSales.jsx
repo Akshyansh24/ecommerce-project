@@ -50,11 +50,12 @@ function DailyBestSales() {
           </div>
           <div className="col-md-9">
             <Carousel>
-              <Carousel.Item interval={500}>
+              <Carousel.Item interval={1000}>
                 <Products  />
               </Carousel.Item>
-              <Products  />
-
+              <Carousel.Item interval={1000}>
+                <Products  />
+              </Carousel.Item>
             </Carousel>
           </div>
         </div>
