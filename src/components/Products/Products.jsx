@@ -1,8 +1,17 @@
 import React from 'react'
 import "./Products.css"
-function Products() {
+import Product from "./Product/Product"
+
+function Products({setshowOldprice}) {
   return (
-    <div>Products</div>
+    <div>
+      <div className="row">
+          <Product setshowOldprice={setshowOldprice}/>
+          <Product/>
+          <Product/>
+          <Product/>
+        </div>
+    </div>
   )
 }
 
