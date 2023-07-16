@@ -15,7 +15,7 @@ const para3 = "When you sign up"
 const title4 = "Wide assortment"
 const para4 = "Mega Discounts"
   return (
-    <div className='px-4 py-4 row'>
+    <div className='mx-0 my-0 px-3 py-4 row'>
         <Featuresitem img={ban1} title={title1} para={para1}/>
         <Featuresitem img={ban2} title={title2} para={para2}/>
         <Featuresitem img={ban3} title={title3} para={para3}/>

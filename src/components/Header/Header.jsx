@@ -55,7 +55,6 @@ function Header() {
               {/* <i class="fa-solid fa-grid"></i> */}
               <img src={Grid} alt="" srcset="" />
               <span>All Products</span>
-      
             </button>
           </div>
           <div className="col-md-10">
