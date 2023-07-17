@@ -19,15 +19,16 @@ function Product(setshowOldprice) {
               <div className="product-category">
                 <p>Snacks</p>
               </div>
-              <h2>Seeds of Change Organic Quinoa, Brown, & Red Rice </h2>
+              <h2 >Seeds of Change Organic Quinoa, Brown, & Red Rice </h2>
               <span className='font-small text-muted'>By NestFood</span>
           </div>
           <div className="product-bottom mt-2">
             <div className="product-price">
               <span>$28.85</span>
-              <span className='old-price'>$32.8</span>
+              {/* {!setshowOldprice ? <span className='old-price'>$32.8</span> : ""} */}
             </div>
             <div className="view-product">
+              
               <button> <i class="fa-solid fa-eye"></i> View</button>
             </div>
           </div>

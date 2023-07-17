@@ -24,6 +24,11 @@
     z-index: 9;
     background-color: #67bcee;
 }
+
+.product-card .product-img{
+  overflow: hidden;
+}
+
 .product-card .product-img img {
   width: 100%;
 }
@@ -67,6 +72,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .product-content .text-muted {
