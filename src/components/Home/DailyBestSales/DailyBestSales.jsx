@@ -44,7 +44,7 @@ function DailyBestSales() {
                 <h2>Bring nature into your home</h2>
               </div>
               <button className="btn btn-shop">
-            Shop Now <i class="fa-solid fa-arrow-right"></i>
+            Shop Now <i className="fa-solid fa-arrow-right"></i>
           </button>
             </div>
           </div>

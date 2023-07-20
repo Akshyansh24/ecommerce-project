@@ -29,7 +29,7 @@ function Product(setshowOldprice) {
             </div>
             <div className="view-product">
               
-              <button> <i class="fa-solid fa-eye"></i> View</button>
+              <button> <i className="fa-solid fa-eye"></i> View</button>
             </div>
           </div>
         </div>

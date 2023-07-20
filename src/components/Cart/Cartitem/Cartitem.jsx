@@ -11,7 +11,7 @@ function Cartitem() {
         </div>
         <div className="prod-details">
             <span className="name">Seeds of Change Organic Quinoa, Brown</span>
-            <span className='remove-btn'><i class="fa-solid fa-x"></i></span>
+            <span className='remove-btn'><i className="fa-solid fa-x"></i></span>
             <div className="quantity-buttons">
                         <span >-</span>
                         <span>1</span>

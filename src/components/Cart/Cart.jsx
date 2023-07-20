@@ -10,11 +10,11 @@ function Cart({showCart, setShowCart}) {
             <div className="cart-header">
                   <span className="heading">Shopping Cart</span>
                   <span className="close-btn" onClick={()=>{setShowCart(false)}}>
-                  <i class="fa-solid fa-x"></i>
+                  <i className="fa-solid fa-x"></i>
                   </span>
               </div>
               {/* <div className="empty-cart">
-              <i class="fa-solid fa-cart-plus"></i>
+              <i className="fa-solid fa-cart-plus"></i>
               <span>No Product in the cart</span>
                 <button onClick={()=>{setShowCart(false)}} className="return-cta">Return To Shop</button>
               </div> */}

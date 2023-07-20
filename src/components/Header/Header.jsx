@@ -1,4 +1,5 @@
-import {React, useState, useEffect} from "react";
+import {React, useState, useEffect, useContext} from "react";
+import {useNavigate} from "react-router-dom"
 import logo from "../../assets/Header/logo.svg";
 import Searchicon from "../../assets/Header/search.png";
 import Carticon from "../../assets/Header/icon-cart.svg";
@@ -7,9 +8,14 @@ import Grid from "../../assets/Header/menu.png";
 import cat1 from "../../assets/category-1.svg"
 import Cart from "../Cart/Cart";
 import "./Header.css";
+import { Context } from "../../utils/context";
+import { toast } from "react-toastify";
+
+
 
 function Header() {
 
+  const {auth, setAuth}  = useContext(Context);
   const [scrolled, setScrolled] = useState(true);
   const handleScroll = () =>{
     const offset = window.scrollY
@@ -22,12 +28,21 @@ function Header() {
 }
 
 const [showCart, setShowCart] = useState(false);
-
-
 useEffect(()=>{
    window.addEventListener("scroll", handleScroll)
 },[]);
 
+const navigate = useNavigate();
+
+const handleLogout = () =>{
+  setAuth({
+    ...auth, user:null,
+    token:'',
+  })
+  localStorage.removeItem('auth')
+  navigate('/login')
+  toast.success("Logout Successfully");
+}
   return (
     <div className="main-header">
       <div className="header">
@@ -41,7 +56,7 @@ useEffect(()=>{
             <div className="searchbar">
               <span>
                 Search
-                <i class="fa-solid fa-angle-right"></i>
+                <i className="fa-solid fa-angle-right"></i>
               </span>
               <input type="text" name="" id="" />
               <img className="searchicon" src={Searchicon} alt="" />
@@ -49,10 +64,10 @@ useEffect(()=>{
           </div>
           <div className="col-md-4">
             <div className="right-header d-flex">
-            <div className="user-account">
+             { auth.user && <div className="user-account" >
                 <img src={Usericon} alt="" />
-                <span className="cart-text">My Order</span>
-              </div>
+                <span className="cart-text">My Account</span>
+              </div>}
               <div className="cart position-relative" onClick={()=>{
                 setShowCart(true);
               }}>
@@ -60,10 +75,17 @@ useEffect(()=>{
                 <span className="cart-count">2</span>
                 <span className="cart-text">Cart</span>
               </div>
-              <div className="user-account">
+              {!auth.user ? 
+              (<div className="user-account" onClick={()=>{
+                navigate('/Login');
+              }}>
                 <img src={Usericon} alt=""  />
-                <span className="cart-text">Account</span>
-              </div>
+                <span className="cart-text">Sign In</span>
+              </div>) :
+              ( <div className="user-account" onClick={handleLogout}>
+                <img src={Usericon} alt=""  />
+                <span className="cart-text">Logout</span>
+              </div>)}
             </div>
           </div>
         </div>
@@ -72,7 +94,7 @@ useEffect(()=>{
         <div className="row">
           <div className="col-md-2">
             <button className="allproducts">
-              {/* <i class="fa-solid fa-grid"></i> */}
+              {/* <i className="fa-solid fa-grid"></i> */}
               <img src={Grid} alt=""  />
               <span>All Products</span>
             </button>
@@ -81,20 +103,20 @@ useEffect(()=>{
             <div className="navbar">
               <ul className="mb-0 d-flex">
                 <li className="navbar-links">
-                  <i class="fa-solid fa-fire"></i>
+                  <i className="fa-solid fa-fire"></i>
                   Deals
                 </li>
                 <li className="navbar-links">
-                <i class="fa-solid fa-house"></i>
+                <i className="fa-solid fa-house"></i>
                   Home
                 </li>
                 <li className="navbar-links">
-                <i class="fa-solid fa-books"></i>
+                <i className="fa-solid fa-books"></i>
                   About
                 </li>
                 <li className=" navbar-links position-relative category" >
                   Categories
-                  <i class="fa-solid fa-angle-down px-2 arrow-icon"></i>
+                  <i className="fa-solid fa-angle-down px-2 arrow-icon"></i>
                   <div className="category-dropdown">
                   <ul className="mb-0">
                     <li className="float-right">
@@ -121,7 +143,7 @@ useEffect(()=>{
                 </div>
                 </li>
                 <li className="contact navbar-links ">
-                <i class="fa-solid fa-phone"></i>
+                <i className="fa-solid fa-phone"></i>
                   Contact US
                 </li>
               </ul>

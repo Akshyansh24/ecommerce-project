@@ -11,10 +11,10 @@ function Category() {
           </div>
           <div className="col-md-8 d-flex justify-content-end">
             <div className="breadcrumbs">
-                <span className="breadcrumb-first"><i class="fa-solid fa-house"></i> Home</span>
-                <span><i class="fa-solid fa-angle-right"></i></span>
+                <span className="breadcrumb-first"><i className="fa-solid fa-house"></i> Home</span>
+                <span><i className="fa-solid fa-angle-right"></i></span>
                 <span>Category</span>
-                <span><i class="fa-solid fa-angle-right"></i></span>
+                <span><i className="fa-solid fa-angle-right"></i></span>
                 <span>Type Categories</span>
             </div>
           </div>

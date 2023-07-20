@@ -14,7 +14,7 @@ function Newletter() {
             </h2>
             <p>Start You'r Daily Shopping with <span>Nest</span> </p>
             <form action="" className="subscribe">
-              <i class="fa fa-paper-plane"></i>
+              <i className="fa fa-paper-plane"></i>
               <input type="email" placeholder="Your email address" />
               <button type="submit" className="btn-subscribe">
                 Subscribe

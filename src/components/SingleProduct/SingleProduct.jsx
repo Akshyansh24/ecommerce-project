@@ -148,7 +148,7 @@ function SingleProduct() {
                   <span onClick={decreament}>-</span>
                 </div>
                 <button className="addToCart">
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i className="fa-solid fa-cart-shopping"></i>
                 Add To Cart
                 </button>
               </div>

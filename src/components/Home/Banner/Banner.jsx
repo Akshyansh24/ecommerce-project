@@ -14,7 +14,7 @@ function Banner() {
       <h1>Pure Coffee <br />Big Discount</h1>
           <p>Sign up for the daily newsletter</p>
      <form action="" className='subscribe'>
-          <i class="fa fa-paper-plane"></i>
+          <i className="fa fa-paper-plane"></i>
         <input type="email" placeholder='Your email address' />
         <button type='submit' className='btn-subscribe'>Subscribe</button>
      </form>
@@ -27,7 +27,7 @@ function Banner() {
           <h1>Snacks box <br />daily save</h1>
       <p>Sign up for the daily newsletter</p>
       <form action="" className='subscribe'>
-      <i class="fa fa-paper-plane"></i>
+      <i className="fa fa-paper-plane"></i>
         <input type="email" placeholder='Your email address' />
         <button type='submit' className='btn-subscribe'>Subscribe</button>
      </form>
